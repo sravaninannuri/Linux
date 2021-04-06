@@ -8,6 +8,7 @@ free
 free -m -------------------to see free memory
 df 
 df -h --------------to see disk free in human readble format
+findmnt-----------------it will mountpoints in tree styaructure
 lsblk ---------to know what all block added to instance
 history -------------to see history of commands what we typed
 !45 ---------to excute command
@@ -16,6 +17,8 @@ ctrl+r ---------if we press this it will give reveser search
 tab ======if we press the tab it will auto complete the command
 ex: usera ------press tab---useradd
 ps aux-----to list all processers running in system
+ps aux | less
+ps aux | wc
 alias ============to set alias name
 ex: alias h=history
 if you type h it will give history of commands
