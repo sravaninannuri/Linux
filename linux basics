@@ -23,6 +23,17 @@ alias ============to set alias name
 ex: alias h=history
 if you type h it will give history of commands
 
+
+to check os
+------------
+goto /etc
+cat os-release
+cat rerdhat-release
+
+man man
+man -k user
+man apropos
+
 redirection
 -------------------
 ls > sravni
