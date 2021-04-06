@@ -32,12 +32,73 @@ ls ghgvhjcg 2> sravani
 it will output of ls ghgvhjcg into the sravani file eventhough it is wrong command
 
 ls * > sravani
-
 ls * > /dev/null ----------------it will discard everything but it will show writting is suucesed
 
 env ----------------to see environmental variables
 
 grep -R linuxteam /etc
+
+
+
+
+
+
+vi commands
+-----------------------
+shift+o ----------craete new line above the cursor
+:w newfilename--------------it wiil save same file into  another file
+shift+i
+shift+a
+i-------insert mode
+esc----command mode
+:wq ----save and exit
+:e! -----------discard our unsaved changes
+:sh ----------it will switch to shell temprary 
+ctrl+d--------return to vi prompt
+x------------to remove single character in vi (right side character)
+shift+x ----------------remove left side characters
+dw -----------remove word
+dd-----to remove whole line
+shift+d   -------------------remove characters next to cursor
+d+shift+g ----------------remove all lines next to cursor
+d1+shift+g-------------remove all lines above the cursor
+set nu---------------to set numbers to file
+
+:11,15d----------to remove particular line(delete lines between 11 and 15)
+shift+g--------------------to go to last line of file
+1+shift+g-------------------to go first line of file
+
+on screen:
+===================
+shift+l-
+shift+_h
+shift+m
+30+shift+g
+cc=======delete line and go to insert mode
+shift+c======remove next to cursor and go to insert mode
+shift+j ========to join two lines
+u=============undo
+
+
+yy---------------to copy line
+p-------------------to paste line
+5yy-----------it will copy 5 lines
+:1,5 co 12 (to copy 1 to 5 lines to after 12)
+:17 m 10 ------------------------to move 17 line afrer 10th lines
+set nonu---------------to hide numbers
+/anywortd     --------------to search any word
+n-----------to go next word same
+N--------bottom to top search
+:%s/map/MAP ----------to convert small letter to capital letter (global)
+:s/map/MAP ----to convert particular line small to capital
+:s/map/MAp/g
+
+
+
+
+
+
+
 
 
 
