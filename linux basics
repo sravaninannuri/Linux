@@ -249,6 +249,18 @@ ln -s file1 file2
 you should not move the symoblic link file.
 both inodes numbers are different
 
+
+USERS:
+--------------------------------------------------------------------
+sudo adduser sravani----------adding user
+sudo useradd sravani
+
+
+sudo userdel sravani------------to delet user      -----------/etc/passwd-------all user info will be stored in it.
+sudo passwd sravani-----------to change user passwd or to set passwd
+ 
+
+
    
 
 
