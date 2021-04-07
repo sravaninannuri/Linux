@@ -110,6 +110,126 @@ N--------bottom to top search
 :s/map/MAp/g
 
 
+3rd day
+-------------------------------------------------------------------------------
+
+mkdir --help
+ls -la-----------to show hidden files
+mkdir -p dirname/dir2/dir3 ----------it will create dir inside another dir
+cd ~----------to go to home 
+cp --help
+cp [option] sourcefile destfile
+
+touch ttt{0..10}-----------to create 10 files at atime
+cp -r sub/sub1
+mv sourcefile destfile
+mv ttt* sub/   ------------mv used to rename file and move the file
+
+rmdir dirname--------------to remove dir
+rm -rf dirname---to remove dir with files  (r=recursive f=forcefully)
+
+
+FINDING FILES
+--------------------------------------
+WHICH ==========ONLY Look for binaries in $PATH
+which useradd
+echo $PATH
+
+locate--------------updatedb---->(db)
+yum install mlocate
+updatedb
+
+find ---------------we can find files using any criteria
+find / -name "hosts"-------------to find file
+find / -type f -size +100M------------it will show all the files which are 100M
+find / -user linuxteam-------------to check what files usernamed linuxteam is using
+find /etc -exec grep -l linuxteam {} \;
+grep -l linuxteam /etc/* 2>/dev/null
+
+
+understanding mounts
+---------------------------------------------------
+if you want to access any device it must be mounted to dir first then only we can access
+
+/boot
+/var
+/home
+
+
+TAR   (tape archiver)
+============================================
+it doesnot compress the data
+we can use it for backup
+
+tar cvf myarchive.tar  /home /etc---------- it will archeive file
+file filename----------------it will tell what kind of file it is.
+tar -xvf filename------it will do untar
+
+gzip
+bzip2         }}------------compression solution
+zip-------------it is windows compatability
+xz
+gzip filename------------it will zip file meaning it will reduce the size
+gunzip filename-------------it will unzip the file
+
+gzip -k myarchive.tar----------------------it will zipn the file and keep the original file as it is  (input files)
+
+
+Linux Links:
+------------------------------------------------------------
+
+links------
+     1.hard link
+     2.symbolic link
+it will work through inodes.(unique number for file)
+
+hardlink:
+ -----------
+   if we create any hardlink for file eventhough you delete the source file the destination file will be there,
+   1.we can't create the hardlink for directories,it is only for files
+   2. it should be in the same partition
+   
+           ln pathofsourcefile destfile
+   ex:ln /root/TESTLINK/testlinkfile testfile123
+   
+symbolic link:
+-----------------
+viceversa of hardlink.it wont store in inode.
+
+ls -li --------to see indode number
+
+ln -s file1 file2
+
+you should not move the symoblic link file.
+both inodes numbers are different
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
