@@ -103,6 +103,7 @@ p-------------------to paste line
 :17 m 10 ------------------------to move 17 line afrer 10th lines
 set nonu---------------to hide numbers
 /anywortd     --------------to search any word
+?anyword -----------this is also to searchword
 n-----------to go next word same
 N--------bottom to top search
 :%s/map/MAP ----------to convert small letter to capital letter (global)
