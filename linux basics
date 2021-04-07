@@ -175,6 +175,51 @@ gunzip filename-------------it will unzip the file
 
 gzip -k myarchive.tar----------------------it will zipn the file and keep the original file as it is  (input files)
 
+TAR FILE AND BACKUP:
+-----------------------------------
+
+Backup Using TAR
+Backup = sudo tar --cvpzf backup.taz.gz --exclude/=directory (recursive) PATH
+--c = create new file (overwrites old file)
+--v = verbose
+--p = preserve permissions
+--z = compress
+--f = filename (very important)
+--exclude=DIRCECTORY is Recursive
+Naming Files with time =  filename-$(date +%F-%T)
+Recover Files from a TAR File
+Recover = sudo tar --xvpzf FILE --C /DIRECTORY
+
+Capital -C = change to directory
+-x = extract
+Cron Jobs
+To Edit the Crontab File = sudo cron --e (first time it will ask you your default editor)
+Format = minute (0-59), hour (0-23, 0 = midnight), day (1-31), month (1-12), weekday (0-6, 0 = Sunday), command
+* Wildcard for Every Minute/Day/Hour/Month?Day of Week
+Example to Backup Entire Server for 1am Every Morning = 0 1 * * * sudo tar -cvpzf /backup.tar.gz --exclude=/mnt /
+
+sudo tar -cvpzf filename.tar.gz /home------c----create
+                                           v=====verbos
+                                           p-----permission
+                                           z-----compress
+                                           f-------filename
+                                           
+sudo -xvpzf filename.tar.gz -C /recover-----------to x--------exrtact
+                                                     -C ----------to recover in another directory
+                                                     /recovery---------dir name where you recovered
+CRON JOBS:
+-------------------------------------
+sudo crontab -e
+* * * * * sudo tar -cpzf filename.tar.gz /home
+m h dom month dayoftheweek
+
+m-----minutes{0-59}
+h-hours{0-23}
+dom-------day of month {0-31}
+month -----{0-12}
+dow-{0-6}
+                                                     
+
 
 Linux Links:
 ------------------------------------------------------------
