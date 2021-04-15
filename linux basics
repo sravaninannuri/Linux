@@ -258,6 +258,63 @@ sudo useradd sravani
 
 sudo userdel sravani------------to delet user      -----------/etc/passwd-------all user info will be stored in it.
 sudo passwd sravani-----------to change user passwd or to set passwd
+
+
+DAY4: FILE MANAGEEMENT COMMANDS:
+---------------------------------------------------
+more filename--------------to see large files (we can go down)
+less filename------------------------- we can scroll up and down
+head filename ------------------it will show first ten lines
+tail filename---------it will show last ten lines
+head -n 20 filename-------will show first 20 lines
+tail -n 20 filename------will show last 20 lines
+tail -f /var/log/messages ----------it will show real time data in logs
+
+cat filename---it will content of file
+       -A ----non printble characters
+       -b--------it will add numbers before the content
+       -s-----it will surpress the space between the content(remove the space)
+man cat---------for cat command help
+tac filename-------it will show file in reverse order
+
+cut -f 3 -d : /etc/passwd | less ----------it will show numbers in 3 position
+cut -f 3 -d : /etc/passwd | sort -n | less
+cut -f 3 -d : /etc/passwd | sort | tr [:lower:] [:upper:]--------translate to lower to upper
+
+text management:
+--------------------------
+we will use grep command daily.
+
+ps aux | grep ssh -------it will show ssh processeors
+ps aux | grep -i ssh ------- -i remove case sensitive
+
+grep -A5 linuxteam /etc/passwd -------( it will show all 5 lines after the linux team)
+grep -B5 linuxteam /etc/passwd ----------(will show all 5 lines before linux team)
+
+REGULAR EXPRESSIONS:
+---------------------------
+grep 'b.t' regex ----------ex:bit,bit
+grep 'bo*t' regex --ex:boot,booooot
+egrep 'b.?t' regex 
+egrep 'bi*t' regex
+
+AWK,SED:
+---------
+WE WILL DATA EXTRACTION AND REPORTING.
+
+awk -F : '/linuxteam/ {print $4 }' /etc/passwd
+
+sed -n 4p sedfile
+sed -i s/four/FOUR/g sedfile -------it will replace small to capital 
+sed -i -e '4d' sedfile ----------it will remove 4 th line
+
+
+
+
+       
+
+
+
  
 
 
